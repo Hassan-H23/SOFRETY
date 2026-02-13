@@ -608,6 +608,7 @@ body::after {
       <p>متوفر لدينا جميع أنواع الدواجن وصواني لحمه وكوارع وحمام ومحشي وبط<br>وكل اللي نفسك فيها — تحت التسويه أو مستوي ✨</p>
       <div class="contact-links">
         <a href="tel:01108127444" class="contact-link call">📱 اتصل: 01108127444</a>
+        <a href="tel:01060474207" class="contact-link call">📱 اتصل: 01060474207</a>
         <a href="https://wa.me/201108127444" target="_blank" class="contact-link wa">💬 واتس آب</a>
       </div>
     </div>
@@ -758,7 +759,9 @@ function sendWhatsApp() {
   let msg = "السلام عليكم 🙏\nأحب أطلب:\n\n", total = 0;
   keys.forEach(k => { const i = menuData.find(x => x.name === k), s = i.price*cart[k]; total += s; msg += `• ${i.name} × ${cart[k]} (${i.unit}) = ${s} ج.م\n`; });
   msg += `\n💰 الإجمالي: ${total} ج.م\n\nشكراً 🙏`;
-  window.open(`https://wa.me/201108127444?text=${encodeURIComponent(msg)}`, '_blank');
+  const encoded = encodeURIComponent(msg);
+  window.open(`https://wa.me/201108127444?text=${encoded}`, '_blank');
+  window.open(`https://wa.me/201060474207?text=${encoded}`, '_blank');
 }
 
 renderCategories(); renderMenu();
